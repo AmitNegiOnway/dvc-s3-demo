@@ -23,13 +23,13 @@ X_scaled = scaler.fit_transform(X)
 
 # Applying PCA
 
-pca = PCA(n_components=2)
+pca = PCA(n_components=3)
 
 X_pca = pca.fit_transform(X_scaled)
 
 # Creating a DataFrame with PCA results
 
-df_pca = pd.DataFrame(data=X_pca, columns=['PC1', 'PC2'])
+df_pca = pd.DataFrame(data=X_pca, columns=['PC1', 'PC2' ,'PC3'])
 
 df_pca['Placed'] = y.values
 
